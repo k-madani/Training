@@ -1,0 +1,37 @@
+<div>
+    <form class="edit-form" #editForm="ngForm" (ngSubmit)="onSubmit(editForm.value)" novalidate>
+
+        <div class="form-group">
+          <label for="name">Old Title:</label>
+          <input type="text" class="form-control" name="oldTitle" [(ngModel)]="editModel.oldTitle">
+        </div>
+        
+        <div class="form-group">
+          <label for="name">New Title:</label>
+          <input type="text" class="form-control" name="title" [(ngModel)]="editModel.title">
+        </div>
+        
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text"  required #name='ngModel' [class.is-invalid]="name.invalid && name.touched" class="form-control" name="newName" [(ngModel)]="editModel.newName">
+        </div>
+        
+        <div class="form-group">
+            <label id="category">Category :</label>
+            <select (blue)="categoryValidate(category.value)" (change)="categoryValidate(category.value)" class="custom-select"  #category="ngModel" [class.is-invalid]="categoryHasError && category.touched" id="category" name="category" [(ngModel)]="editModel.category">
+              <option value="default">I am interested in</option>
+              <option *ngFor="let category of categories">{{category}}</option>
+            </select>
+            <small class="text-danger" [class.d-none]="!categoryHasError || category.untouched">Select a category!</small>
+          </div>
+        
+        <div class="form-group">
+          <label for="name">Description:</label>
+          <input type="text" class="form-control" name="description" [(ngModel)]="editModel.description">
+        </div>
+        <div class="form-buttons">
+            <button [disabled]="userForm.form.invalid || categoryHasError" class="btn btn-primary" type="submit">Submit Form</button>
+        </div>
+
+    </form>     
+</div>
