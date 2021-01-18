@@ -1,0 +1,38 @@
+*Assignment 2*
+
+Atlanta Population:
+•	To find where city is “ATLANTA” and state is “GA”
+> db.zipcodes.find({city:"ATLANTA",state:"GA"})
+•	Use $match for previous query 
+> db.zipcodes.aggregate({$match:{$and:[{city:"ATLANTA"},{state:"GA"}]}})
+•	Use $group to count no of zipcodes in Atlanta
+> db.zipcodes.aggregate([{$group:{_id:null,count:{$sum:1}}}])
+{ "_id" : null, "count" : 29353 }
+•	Total population in Atlanta
+> db.zipcodes.aggregate([{$group:{_id:"ATLANTA",total:{$sum:"$pop"}}}])
+
+Populations by State :
+•	Use aggregate for total Population in each state 
+>  db.zipcodes.aggregate( { $group:{ _id:"$state",total:{$sum:"$pop"}  } } )
+•	Sort the previous results by population , highest first
+>  db.zipcodes.aggregate( [{ $group:{ _id:"$state",total:{$sum:"$pop"}  } } , { $sort:{total:-1} }])
+•	Limit the previous result to just the first 3 results
+> db.zipcodes.aggregate( [{ $group:{ _id:"$state",total:{$sum:"$pop"}  } } , { $sort:{total:-1} },{$limit:3}])
+
+Populations by City :
+•	Total population in each city 
+> db.zipcodes.aggregate([{$group:{_id:"$city",total:{$sum:"$pop"}}}])
+•	Sort the total by high to low , population by city
+>  db.zipcodes.aggregate( [{ $group:{ _id:"$city",total:{$sum:"$pop"}  } } , { $sort:{total:-1} }])
+•	Limit above result to 3, population by city
+> db.zipcodes.aggregate([{ $group:{ _id:"$city",total:{$sum:"$pop"}  } }, { $sort:{total:-1}},{$limit:3}])
+•	Top 3 cities in population in Texas
+> db.zipcodes.aggregate([{ $group:{ _id:"$state.Texas.city",total:{$sum:"$pop"}  } }, { $sort:{total:-1}},{$limit:3}])
+
+Bonus:
+•	Average city population for each state 
+> db.zipcodes.aggregate( [{ $group:{ _id:"$state",avg:{$avg:"$pop"}}}])
+•	Top 3 states in terms of average city population
+> db.zipcodes.aggregate( [{ $group:{ _id:"$city",avg:{$avg:"$pop"}}},{$sort:{avg:-1}},{$limit:3}])
+
+
