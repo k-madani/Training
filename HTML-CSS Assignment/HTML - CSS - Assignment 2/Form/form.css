@@ -1,0 +1,75 @@
+body,html{
+    height:100%;
+    margin:0;
+}
+*{
+    box-sizing: border-box ;
+}
+.bg{
+    margin:0 auto;
+    background-image: url("park.png");
+   filter: blur(8px);
+    -webkit-filter: blur(8px);
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    top: 50%;
+    left:50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    padding: 20px;
+    text-align: center;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: rgba(27, 27, 50, 0.8);
+    color:#08c9c9;
+    font-weight: bold;
+    font-size: large;
+    font-family:'Lucida Sans Regular';  
+}
+h1{
+    font-family:  'Lucida Sans Regular';
+    text-align: center;
+    font-weight: bolder;
+    font-size: 40px;
+    color:White;
+    font-family: 'Lucida Sans';
+}
+
+p{
+    text-align: center;
+    font-size: medium;
+    color:white;
+    font-size: 25px;
+    font-family: 'Lobster';
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+td,tr{
+    width:40%;
+    margin: 4px 2;
+    padding: 15px 15px;
+}
+
+.btn {
+    padding: 10px 15px;
+    border:none;
+    cursor: pointer;
+    text-align: center;
+    width: 45%;
+    border: 2px solid orange;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 4px 2px;
+    font-family:'Lucida Sans Regular';
+    color: white;
+    background-color:orange;
+}

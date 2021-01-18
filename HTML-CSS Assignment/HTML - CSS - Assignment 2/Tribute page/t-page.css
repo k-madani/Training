@@ -1,0 +1,82 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	overflow-x: hidden;
+}
+
+main {
+	padding: 2% 5% 0%;
+}
+h1{
+    font-size: 70px;
+    color: #304555;
+    text-shadow: 2px 1px black;
+}
+.style{
+    font-size: 30px;
+    color: #304555;
+    font-family: 'Lobster';
+}
+.style1{
+    text-align: "center";
+    font-size: 25px;
+}
+link{
+    text-align: center;
+    text-decoration: underline;
+}
+link:hover{
+    color:white;
+}
+link:visited{
+    color:red;
+}
+h3{
+    font-size: 30px;
+    color:#304555 ;
+}
+.base {
+	border-radius: 15px;
+	padding: 30px 30px 10px;
+	background-color: #eee;
+	text-align: center;
+}
+
+.cover_image {
+	border-radius: 15px;
+	padding: 10px;
+	margin: 1px;
+	background-color: #ccc;
+	text-align: center;
+	color: #222;
+}
+
+.cover_image .cover {
+	border-radius: 15px;
+	width: 100%;
+	height: auto;
+}
+
+.content {
+	border-radius: 15px;
+	text-align: left;
+    background-color: rgba(20, 141, 155, 0.4);
+    color: #304555;
+	padding: 15px;
+	font-size: 22px;
+}
+
+.content ul {
+	padding: 20px;
+	text-align: left;
+	color: #304555;
+	font-size: 22px;
+	font-weight: bold;
+	list-style: circle;
+	list-style-position: inside;
+}
+
+.content ul li {
+	font-weight: 100;
+}

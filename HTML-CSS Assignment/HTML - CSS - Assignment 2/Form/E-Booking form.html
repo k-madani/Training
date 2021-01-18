@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DREAM Theme Park</title>
+<link rel="stylesheet" href="form.css">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lobster" />
+</head>
+<body>
+	<div class="bg"></div>
+	<div>
+		<div class="container">
+			<h1>DREAM THEME PARK</h1>
+			<p><em>Fill out the details , book your tickets!</em></p>
+			<form>
+					<table>
+					
+					<tr>
+					<td>Customer Name</td>
+					<td><input type="text" name="customerName" id="customerName" required="required"  pattern="[A-Za-z ]+" placeholder ="Enter your name" /> </td>
+					</tr>
+					
+					<tr>
+					<td>Address</td>
+					<td><textarea rows="5" cols="20" name="address" id="address" required="required" ></textarea> 
+					</td>
+					</tr>
+					
+					<tr>
+					<td>Email ID</td>
+					<td><input  type="email" name="customerEmail"  id="customerEmail" required="required"> </td>
+					</tr>
+					
+					<tr>
+					<td>Mobile Number</td>
+					<td><input type="text" name="customerMobileNumber" id="customerMobileNumber" pattern="[7-9]{1}[0-9]{9}"   required="required"> </td>
+					</tr>
+					
+					<tr>
+					<td>Park Location</td>
+					<td><input type="radio"  name="location" id="location" value="Delhi" required="required" >Delhi
+					<input type="radio"  name="location" id="location" value="Mumbai" required="required">Mumbai
+					</td>
+					</tr>
+					
+					<tr>
+					<td>Date of Visit</td>
+					<td><input type="date" name="dateofvisit" id="dateofvisit" required="required"> </td>
+					</tr>
+					
+					<tr>
+					<td>Booking Type</td>
+					<td><input name="bookingType" id="bookingType" list="bookType">
+							<datalist   id="bookType">
+							  <option value="Normal">
+							<option value="School">
+							<option value="Corporate">
+							</datalist></td>
+					</tr>
+				
+					<tr>
+					<td>No. of Tickets</td>
+					<td><input type="number"  name="tickets" id="tickets" required="required"> </td>
+					</tr>
+					
+					
+					<tr>
+					<td><input type="submit" value="Book Now" name="submit" class="btn"> </td>
+					<td><input type="reset" value="Clear" class="btn" > </td>
+					</tr>					
+			</form>			
+		</div>
+	</div>
+	</body>
+</html>

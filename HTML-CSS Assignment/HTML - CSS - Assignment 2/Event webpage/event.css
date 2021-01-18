@@ -1,0 +1,66 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-auto-rows: minmax(200px,auto);
+    margin: 0,auto;
+    padding: 10px;
+}
+
+body,html{
+    display: block;
+    margin:0;
+    box-sizing: border-box;
+    background-color: #293f50;;
+}
+.header{
+    background-color: #293f50;
+    color:white;
+    grid-column: 1/4;
+    font:300 48px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 40px 0 22px 22px;
+    float: left;
+    letter-spacing: .5px;
+}
+.main{
+    background-color: #293f50;
+    color: white;
+    grid-column: 1/4;
+    grid-row: 2/3;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Lato';
+}
+.button{
+    background-color: transparent;
+    border:1px solid white;
+    color: white;
+    font-size:20px ;
+    border-radius: 5px;
+    padding: 15px 32px;
+    cursor: pointer;
+    text-align: center;
+    margin: 4px 2px;
+    
+}
+.button:hover{
+    background-color: white;
+    color: #888;
+}
+.section{
+    color: #888;
+    background-color: white;
+    text-align: left;
+    padding:10px 15px 10px 15px;
+    vertical-align: top;
+    font-family: 'Lato';
+}
+.img{
+     display: block;
+  margin-left: auto;
+  margin-right: auto;
+    height: 200px;
+    width: 300px;
+    border: none;
+    border-radius: 10px;
+    align-items: center;
+}
