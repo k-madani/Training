@@ -1,0 +1,19 @@
+body{
+    background-color: #99ffff;
+    font-family: 'Lucida Sans Regular';
+    font-size: large;
+    font-weight: bolder;
+}
+a:link{
+    color: red;
+    text-decoration: underline;
+}
+a:visited{
+    color: purple;
+}
+a:active{
+    color: blue;
+}
+a:hover{
+    color: green;
+}

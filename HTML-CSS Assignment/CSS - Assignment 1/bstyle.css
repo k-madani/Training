@@ -1,0 +1,14 @@
+
+.center{
+    border: 3px solid red;
+    outline: 7px dotted green;
+    width: 98%;
+    align-content: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+div{
+    border: 5px solid cadetblue;
+    box-sizing: content-box;
+}
