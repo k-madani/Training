@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>count</title>
+</head>
+<body>
+    <h2>Count length of words where there is no "Q" in it</h2>
+    <hr>
+    <form>
+        <label for="string_arr">Enter the array of strings</label>
+        <input type="text" id="string_arr" name="string_arr"><br><br>
+        <input type="submit" value ="submit" onclick="count_length();return false">
+    </form>
+    <script>
+        function count_length(){
+            var reject=[];
+            var final=[];
+            count=0;
+            var str =document.getElementById("string_arr").value;
+            var a=str.split(",");
+            for(i=0; i<a.length; i++)
+            {
+                if (a[i].includes("q")) {
+                reject.push(a[i]);} 
+            else {
+                final.push(a[i]);}
+            }
+
+            for(j=0; j<final.length; j++)
+            {
+                count += (final[j].length);
+            }
+                alert(count);
+        }
+    </script>
+</body>
+</html>

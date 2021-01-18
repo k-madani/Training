@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Split into individual digits</h3>
+    <script>   
+          var a = 28573;
+         var arr=[];
+         while(a > 0) {
+            arr.push( a % 10);
+            a = Math.floor(a / 10);
+         } 
+         arr=arr.reverse();
+         document.write(arr); 
+    </script>  
+</body>
+</html>

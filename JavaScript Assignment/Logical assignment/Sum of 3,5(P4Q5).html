@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sum of 3,5</title>
+</head>
+<body>
+    <h2>Sum of 'n' numbers where only multiple of 3 & 5 are considered</h2>
+    <hr>
+    <br>
+    <form>
+        <label for="input">Enter no. of terms</label><br>
+        <input type="number" id="input" name="input"><br><br>
+        <input type="submit" value="Calculate" onclick="total(); return false"> 
+    </form>
+    <h4 id="result"></h4>
+
+    <script>
+        function total(){
+            var sum=0;
+            var x=Number(document.getElementById("input").value);
+            for(var i=1;i<=10;i++){
+                if((i % 3 == 0 )||(i % 5 == 0)||(i % 3 == 0 && i % 5 == 0)){
+                    sum=sum+i;
+                }
+            }
+            document.getElementById("result").innerHTML="The sum is: "+sum;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List</title>
+</head>
+<body>
+    <h2>List Operations</h2>
+    <hr>
+    <script>
+        function calculate_list(){
+    total=0;
+    //largest number in list 
+    var x=[12,32,4,56,87,1];
+    var max=x[0];
+    for(var i=0;i<x.length;i++){
+        if(x[i]>x[0]){
+            max=x[i];
+        }
+    }
+    //reverse the list
+    var y=x.reverse();
+    //check if element is present
+    var a=13;
+    var str;
+    for(var i=0;i<x.length;i++){
+        if(a===x[i]){
+            str="present";
+            break;
+        }
+        else{
+            str="not present"
+        }
+    }
+    
+    //return odd position in list
+    var odd=[];
+    for (var i=0;i<x.length;i++){
+        if ((i+2)%2==1) {
+        odd.push(x[i]);
+      } 
+    }
+    //total of list elements
+    for( var i=0;i<x.length;i++){
+        total=total+x[i];
+    }
+    console.log("Largest :"+max);
+    console.log("reverse :"+y);
+    console.log("Element: "+str);
+    console.log("odd position: "+odd);
+    console.log("total "+total);
+
+}
+console.log(calculate_list());
+    </script>
+</body>
+</html>

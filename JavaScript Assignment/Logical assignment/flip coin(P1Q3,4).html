@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flip coin</title>
+</head>
+<body>
+    <h2>To count number of heads on flippinf the coin</h2>
+    <hr>
+    <form>
+        <label for="no_of_flips">Enter number of flips</label><br>
+        <input type="number" id="no_of_flips" name="no_of_flips"><br><br>
+        <label for="facing">Coin facing</label><br>
+        <input type="text" id="facing" name="facing"><br><br>
+        <input type="submit" value="Calculate" onclick="flipCoin();return false">
+    </form>
+    <script>
+        function flipCoin(){
+            var n=Number(document.getElementById("no_of_flips").value);
+            var c=document.getElementById("facing").value;
+            if(c=="H"||c=="h"){
+                var h=Math.floor(n/2);
+                /*var t=Math.ceil(n/2);*/
+                var h_ratio=1-(h/n);
+                alert(h_ratio);
+                alert(h);
+            }
+            else if(c=="T"||c=="t"){
+               /* var h=Math.ceil(n/2);*/
+                var t=Math.floor(n/2);
+                var t_ratio=1-(t/n);
+                alert(t_ratio);
+                alert(t);
+            }
+            else{
+                alert("counterfiet coin")
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Binary Search </title>
+</head>
+<body>
+    <h2>To perform Binary search</h2>
+    <hr>
+    <script> 
+        function binary_Search(items, value){
+            var firstIndex  = 0,
+            lastIndex   = items.length - 1,
+            middleIndex = Math.floor((lastIndex + firstIndex)/2);
+
+            while(items[middleIndex] != value && firstIndex < lastIndex)
+            {
+            if (value < items[middleIndex])
+            {
+                lastIndex = middleIndex - 1;
+            } 
+            else if (value > items[middleIndex])
+            {
+                firstIndex = middleIndex + 1;
+            }
+            middleIndex = Math.floor((lastIndex + firstIndex)/2);
+        }
+
+        return (items[middleIndex] != value) ? "Element not found" : middleIndex;
+        }
+        var items = [1, 2, 3, 4, 7, 8, 9];
+        document.write("Element found at: "+binary_Search(items, 1)+"<br><br>");   
+        document.write(binary_Search(items, 5));
+    </script>                                              
+</body>
+</html>

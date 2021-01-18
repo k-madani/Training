@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<head></head>
+<body>
+
+<h4>Arrays to generate 100 random number</h4>
+<script>
+var hundredNums = [...Array(100)].map(() => Math.floor(Math.random() * 99));
+
+for(var i=0;i<hundredNums.length;i++){
+    console.log(hundredNums[i]+"<br>");
+}
+
+</script>
+
+</body>
+</html>

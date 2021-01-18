@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fahrenheit to degree Celsius</title>
+</head>
+<body>
+    <h2>To convert temperature from Fahrenheit to Degree Celsius</h2>
+    <hr>
+    <br>
+    <form>
+        <label for="temp">Enter the temperature in Fahrenheit</label><br>
+        <input type="text" id="temp" name="temp"><br><br>
+        <input type="button" value="Show Results" onclick="temperature_change()">
+    </form> 
+    <h3 id="result"></h3>
+    <script>
+        function temperature_change(){
+            var x=Number(document.getElementById("temp").value);
+            if(isNaN(x)){
+                document.getElementById("result").innerHTML="Invalid Input!";
+            }
+            else{
+                var y=((x-32)*5)/9;
+                document.getElementById("result").innerHTML=y.toFixed(3)+" degree Celsius.";
+            }
+        }
+    </script>
+</body>
+</html>

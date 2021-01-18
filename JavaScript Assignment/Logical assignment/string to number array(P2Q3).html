@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <h2>Convert string array to number array</h2>
+    <hr>
+    <form>
+        <label for="arr">Enter string array</label>
+        <input type="text" id="arr" name="arr"><br><br>
+        <input type="submit" value="submit" onclick="string_to_numberarray();return false">
+    </form>
+    <h3 id="result"></h3>
+    <script>
+       function string_to_numberarray(){
+        var x=[];
+        x=document.getElementById("arr").value;
+        var final=x.split(',');
+        for(var i=0;i<final.length;i++){
+            final[i]=Number(final[i],10);
+        }
+        
+        document.getElementById("result").innerHTML=final;
+        }
+    </script>
+</body>
+</html>

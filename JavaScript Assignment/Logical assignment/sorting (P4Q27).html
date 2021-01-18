@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sorting</title>
+</head>
+<body>
+	<h3>Sorting functions</h3>
+    <script>
+        //selection sort
+        function Selection_Sort(arr, compare_Function) {
+            function compare(a, b) {
+                return a - b;
+ 			} 
+			var min = 0;
+			var index = 0;
+			var temp = 0;
+		//{Function} compare_Function Compare function
+		compare_Function = compare_Function || compare;
+
+		for (var i = 0; i < arr.length; i += 1) {
+  			index = i;
+  			min = arr[i];
+			for (var j = i + 1; j < arr.length; j += 1) {
+    			if (compare_Function(min, arr[j]) > 0) {
+      				min = arr[j];
+      				index = j;
+    			}
+  			}
+
+  			temp = arr[i];
+  			arr[i] = min;
+  			arr[index] = temp;
+		}
+		//return sorted arr
+		console.log("selection sort: "+arr);
+	}
+	console.log(Selection_Sort([3, 0, 2, 5, -1, 4, 1], function(a, b) { return a - b; })); 
+	console.log(Selection_Sort([3, 0, 2, 5, -1, 4, 1], function(a, b) { return b - a; }));
+
+
+//insertion sort
+function insertion_Sort(nums) {
+  for (var i = 1; i < nums.length; i++) {
+    var j = i - 1;
+    var temp = nums[i];
+    while (j >= 0 && nums[j] > temp) {
+      nums[j + 1] = nums[j];
+      j--;
+    }
+    nums[j+1] = temp;
+  }
+  console.log("Insertion sort: "+nums);
+}
+console.log(insertion_Sort([3, 0, 2, 5, -1, 4, 1]));
+console.log(insertion_Sort([2,6,5,12,-1,3,8,7,1,]));
+
+//merge sort
+function merge_sort(left_part,right_part) 
+{
+	var i = 0;
+	var j = 0;
+	var results = [];
+
+	while (i < left_part.length || j < right_part.length) {
+		if (i === left_part.length) {
+			// j is the only index left_part
+			results.push(right_part[j]);
+			j++;
+		} 
+      else if (j === right_part.length || left_part[i] <= right_part[j]) {
+			results.push(left_part[i]);
+			i++;
+		} else {
+			results.push(right_part[j]);
+			j++;
+		}
+	}
+	console.log("Merge sort: "+results);
+}
+
+console.log(merge_sort([1,3,4], [3,7,9]));
+
+//quick sort
+function quick_Sort(origArray) {
+	if (origArray.length <= 1) { 
+		return origArray;
+	} else {
+
+		var left = [];
+		var right = [];
+		var newArray = [];
+		var pivot = origArray.pop();
+		var length = origArray.length;
+
+		for (var i = 0; i < length; i++) {
+			if (origArray[i] <= pivot) {
+				left.push(origArray[i]);
+			} else {
+				right.push(origArray[i]);
+			}
+		}
+
+		return newArray.concat(quick_Sort(left), pivot, quick_Sort(right));
+	}
+}
+
+var myArray = [3, 0, 2, 5, -1, 4, 1 ];
+
+console.log("Original array: " + myArray);
+var sortedArray = quick_Sort(myArray);
+console.log("Sorted array: " + sortedArray);
+    </script>
+</body>
+</html>

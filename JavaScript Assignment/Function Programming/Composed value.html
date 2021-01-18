@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Composed Value</title>
+    <script src="Composed value.js"></script>
+</head>
+<body>
+    <h2>To double the input and square the new value</h2>
+    <hr>
+    <form>
+        <label for="input1">Enter a number</label><br>
+        <input type="number" id="input1" name="input1"><br><br>
+        <input type="submit" value="Calculate" onclick="composedValue(square,double,document.getElementById('input1').value);return false">
+    </form>
+    <h4 id="output"></h4>
+</body>
+</html>

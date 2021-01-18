@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <form>
+        <label for="list1">Enter elements of list 1</label>
+        <input type="text" id="list1" name="list1"><br><br>
+        <label for="list2">Enter elements of list 2</label>
+        <input type="text" id="list2" name="list2"><br><br>
+        <input type="submit" value="submit" onclick="combine_lists();return false">
+        <h3 id="output"></h3>
+    </form>
+    <script>
+        function combine_lists(){
+            var arr1=document.getElementById("list1").value;
+            var arr2=document.getElementById("list2").value;
+            var new_arr1=arr1.split(",");
+            var new_arr2=arr2.split(",");
+            var n1=new_arr1.length;
+            var n2=new_arr2.length;
+            var arr3=[]; 
+            var i=0; var j=0; var k=0;
+            var x=[];
+            x=new_arr1.concat(new_arr2);
+            x.sort(function(a, b){return a - b});
+            if(i==j){
+                while(i<n1 && j<n2){
+                arr3[k++]=new_arr1[i++];
+                arr3[k++]=new_arr2[j++];
+            }
+        }
+            else{
+                alert("The indexes are not equal");
+            }
+            console.log(x);
+            console.log("The combined array is: ["+arr3+"]");
+        }
+    </script>
+</body>
+</html>

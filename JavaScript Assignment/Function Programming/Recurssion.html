@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recurssion</title>
+</head>
+<body>
+    <script>
+        function find(x,isEven){
+            if(x.length===1){
+                return isEven(x[0]);
+            }
+            if(isEven(x[0])===true){
+                return true;
+            }
+            else{
+               return find(x.slice(1),isEven);
+            }
+        }
+
+        function isEven(y){
+            return((y%2==0));
+        }
+        console.log(find([1,3,5,7,9],isEven));
+
+        function map(x,square){
+            var c=[];
+            if(x.length===1){
+                c.push(square(x[0]));
+                return c;
+            }
+            c.push(square(x[0]));
+            return c.concat(map(x.slice(1),square));
+        }
+        function square(x){
+            return x*x;
+        }
+        console.log(map([1,2,3,4],square));
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Even-Odd</title>
+</head>
+<body>
+    <h2>To check even or odd</h2>
+    <hr>
+    <br> 
+    <form>
+        <label for="input">Enter a number</label>
+        <input type="number" id="input" name="input"><br><br>
+        <input type="submit" value="Submit" id="submit" onclick="parity()">
+    </form>
+    <script>
+        function parity(){
+            var a=Number(document.getElementById("input").value);
+            if(a%2==1)
+                alert("The input is an odd number.");
+            else 
+                alert("The input is an even number.");
+        }
+    </script>
+</body>
+</html>
