@@ -1,0 +1,7 @@
+
+.grid-container > div{
+    background-color: rgba(255, 255, 255, 0.8);
+  border-right: 1px solid rgb(168, 166, 166);
+  border-left:1px solid rgb(168, 166, 166);
+  text-align: center;
+}

@@ -1,0 +1,43 @@
+<app-header></app-header>
+<div class="row pt-5">
+    <div class="col-md-6 mx-auto">
+        <div class="card rounded-0">
+            <div class="card-header">
+                <h2 class="mb-0">Register</h2>
+            </div>
+            <div class="card-body">
+                <form class="form" #registerForm="ngForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" #name="ngModel" name="name" id="email" [(ngModel)]="registerUserData.name" required>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" name="email" id="email" [(ngModel)]="registerUserData.email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password" id="password" [(ngModel)]="registerUserData.password" required>
+                    </div>
+                    
+                    <button class="btn btn-success float-right" (click)="registerUser()" type="button">Register</button>
+                    <button class="btn btn-success" (click)="resetForm(registerForm)">Reset</button>
+                </form>
+                          
+<div class="success" *ngIf="showSucessMessage">
+    Saved successfully
+  </div>
+    
+  <!-- Error message -->
+  <div class="alert" *ngIf="serverErrorMessages">
+    {{serverErrorMessages}}
+  </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br><br><br><br><br><br><br>
+
+<app-footer></app-footer>

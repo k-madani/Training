@@ -74,7 +74,7 @@
     "ApiLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/Admin-production-api"
+        "LogGroupName": "/aws/lambda/Admins-production-api"
       }
     },
     "IamRoleLambdaExecution": {
@@ -102,7 +102,7 @@
               "Fn::Join": [
                 "-",
                 [
-                  "Admin",
+                  "Admins",
                   "production",
                   "lambda"
                 ]
@@ -119,7 +119,7 @@
                   ],
                   "Resource": [
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/Admin-production*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/Admins-production*:*"
                     }
                   ]
                 },
@@ -130,7 +130,7 @@
                   ],
                   "Resource": [
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/Admin-production*:*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/Admins-production*:*:*"
                     }
                   ]
                 }
@@ -143,7 +143,7 @@
           "Fn::Join": [
             "-",
             [
-              "Admin",
+              "Admins",
               "production",
               {
                 "Ref": "AWS::Region"
@@ -161,11 +161,11 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/Admin/production/1611118292165-2021-01-20T04:51:32.165Z/Admin.zip"
+          "S3Key": "serverless/Admins/production/1611201677657-2021-01-21T04:01:17.657Z/Admins.zip"
         },
         "Handler": "lambda.handler",
         "Runtime": "nodejs12.x",
-        "FunctionName": "Admin-production-api",
+        "FunctionName": "Admins-production-api",
         "MemorySize": 512,
         "Timeout": 15,
         "Role": {
@@ -179,20 +179,20 @@
         "ApiLogGroup"
       ]
     },
-    "ApiLambdaVersionwcFhucdbgRAIRlTcKn6STCf9BN06gQdBIyzQt5LynE": {
+    "ApiLambdaVersionfu6Io84dF9LEOHSeoWosLLVEj2hk4MVEoBKXo5Yig": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ApiLambdaFunction"
         },
-        "CodeSha256": "q8orhIMZCB03MbkrDERH4H/GOg6E/mvYm+4gDnKAfRA="
+        "CodeSha256": "LZI8n/mCq2pU/grn5E+A15TlnHc6q61zRQvM6+G4V7c="
       }
     },
     "ApiGatewayRestApi": {
       "Type": "AWS::ApiGateway::RestApi",
       "Properties": {
-        "Name": "production-Admin",
+        "Name": "production-Admins",
         "EndpointConfiguration": {
           "Types": [
             "EDGE"
@@ -305,7 +305,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1611118280511": {
+    "ApiGatewayDeployment1611201664535": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -365,7 +365,7 @@
     "ApiLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ApiLambdaVersionwcFhucdbgRAIRlTcKn6STCf9BN06gQdBIyzQt5LynE"
+        "Ref": "ApiLambdaVersionfu6Io84dF9LEOHSeoWosLLVEj2hk4MVEoBKXo5Yig"
       }
     },
     "ServiceEndpoint": {

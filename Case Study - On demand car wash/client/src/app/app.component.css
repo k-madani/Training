@@ -1,0 +1,21 @@
+body{
+    font-family: 'Lato' , 'sans-serif';
+}
+.primary{
+    color:#FE5F1E;
+}
+.primary-hover{
+    color:#b23301;
+}
+.secondary{
+    color: #F8F8F8;
+}
+.pure{
+    color:#fff;
+}
+.dark{
+    color:#232323;
+}
+.gray{
+    color: #ccc;
+}

@@ -1,0 +1,31 @@
+<app-header></app-header>
+
+<div class="container">
+  <div class="card-deck" >
+    <div class="card bg-light" *ngFor="let order of orders,let i = index">
+      <div class="card-header text-center">
+        <h3>Order No: {{i+1}}</h3>
+      </div>
+      <div class="card-body">
+       <ul style="font-size: 12px;">
+         <li><strong>Order Id : </strong>{{order._id}}</li>
+         <li><strong>User Name : </strong>{{order.username}}</li>
+         <li><strong>User Email : </strong>{{order.email}}</li>
+         <li><strong>User Phone : </strong>{{order.phone}}</li>
+         <li><strong>Location : </strong>{{order.location}}</li>
+         <li><strong>Washer Name : </strong>{{order.washername}}</li>
+         <li><strong>Washer Phone : </strong>{{order.washerphone}}</li>
+         <li><strong>Package Name : </strong>{{order.package_name}}</li>
+         <li><strong>Total amount : </strong>{{order.amount}}</li>
+         <li><strong>status : </strong>{{order.status}}</li>
+       </ul>
+      </div>
+      <div class="card-footer text-center">
+        <button class="btn btn-outline-info" style="font-size:15px ;" (click)=assignWasher(order)>Assign Washer</button> &nbsp;&nbsp;
+        <button class="btn btn-outline-info" style="font-size:15px ;" (click)="removeOrder(order._id,i)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br><br><br><br>
+<app-footer></app-footer>

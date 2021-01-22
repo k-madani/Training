@@ -22,7 +22,7 @@ app.use(`/api`,appRoutes);
 
 
 //connecting to database
-mongoose.connect('mongodb://localhost:27017/car-wash',{useNewUrlParser: true, useFindAndModify: false , useUnifiedTopology: true,useCreateIndex: true},(err)=>{
+mongoose.connect('mongodb+srv://krishna:krishna@cluster0.j7yud.mongodb.net/<dbname>?retryWrites=true&w=majority',{useNewUrlParser: true, useFindAndModify: false , useUnifiedTopology: true,useCreateIndex: true},(err)=>{
     
     if(err){
         console.log(`Not connected to databse: ${err}`);
@@ -35,9 +35,9 @@ mongoose.connect('mongodb://localhost:27017/car-wash',{useNewUrlParser: true, us
 
 
 //starting the server
-app.listen(port , function(){
-    console.log(`Running on server ${port}.`);
+//app.listen(port , function(){
+  //  console.log(`Running on server ${port}.`);
 
-})
+//})
 
 module.exports = app;

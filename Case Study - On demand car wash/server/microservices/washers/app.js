@@ -35,9 +35,9 @@ mongoose.connect('mongodb://localhost:27017/car-wash',{useNewUrlParser: true, us
 
 
 //starting the server
-app.listen(port , function(){
-    console.log(`Running on server ${port}.`);
+//app.listen(port , function(){
+  //  console.log(`Running on server ${port}.`);
 
-})
+//})
 
 module.exports = app;

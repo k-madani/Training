@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <a class="navbar-brand mb-0 h1" routerLink="/home" style=" font-size: 20px;">Easy Car Wash</a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse navbar-right" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+
+      <!--home-->
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/home" style="  font-size: 13px;">
+          Home 
+        <span class="sr-only">(current)</span></a>
+      </li>
+
+      <!--about-->
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/about-us" style=" font-size: 13px;">
+          About Us
+        </a>
+      </li>
+  
+      <!--user orders-->
+        <li class="nav-item ">
+          <a class="nav-link"  *ngIf="userService.loggedIn()"  style="  font-size: 14px;" routerLink="/allpackages">Book Order</a>
+      </li>
+    
+
+      <!--admin orders-->
+       <li class="nav-item">
+        <a class="nav-link" *ngIf="adminService.loggedIn()" routerLink="/allorders"   style="  font-size: 13px;">
+         Orders
+        </a>
+      </li>
+     
+
+      <!--admin users-->
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="adminService.loggedIn()" routerLink="/allusers"   style="  font-size: 13px;">
+          Users
+        </a>
+      </li>
+      
+
+      <!--register-->
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/user-register"  *ngIf="!userService.loggedIn() || !adminService.loggedIn()" style="  font-size: 13px;">
+          Register
+        </a>
+      </li>
+            
+      <!--login-->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" *ngIf="!userService.loggedIn() || !adminService.loggedIn()"  style=" font-size: 13px;" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Login
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item"  style="  font-size: 14px;" routerLink="/login">User</a>
+          <a class="dropdown-item"  style="  font-size: 14px;" routerLink="/adminLogin">Admin</a>
+        </div>
+      </li>
+
+      <!--logout-->
+      <li class="nav-item">
+        <a class="nav-link"  *ngIf="userService.loggedIn() || adminService.loggedIn()" (click)="userService.logOut()" style="  font-size: 13px;">
+          Logout
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

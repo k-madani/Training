@@ -1,0 +1,40 @@
+<app-header></app-header>
+
+<main>
+    <div class="row pt-5">
+        <div class="col-md-6 mx-auto">
+          <div class="card rounded-0">
+                <div class="card-header">
+                    <h2 class="mb-0">Booking details</h2>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                          <label>Name</label>
+                          <input type="text" class="form-control" #userName="ngModel" name="userName"  [(ngModel)]="orderDetails.username" required>
+                        </div>
+              
+                        <div class="form-group">
+                          <label>Email</label>
+                          <input type="text" class="form-control" #Email="ngModel" name="Email"  [(ngModel)]="orderDetails.email" required>
+                        </div>
+              
+                        <div class="form-group">
+                          <label >Phone</label>
+                          <input type="text" class="form-control" #Phone="ngModel" name="Phone"  [(ngModel)]="orderDetails.phone" required>
+                        </div>
+              
+                        <div class="form-group">
+                          <label >Location</label>
+                          <textarea name="Location"   #Location="ngModel" class="form-control" [(ngModel)]="orderDetails.location"></textarea>
+                        </div>
+                        <button class=" btn btn-outline-info" (click)="bookOrder()">Submit</button>
+                        <button type="button" class="btn"  (click)="initPay()"  >Pay via razor pay</button>
+                    </form>
+                </div>
+          </div>
+        </div>
+    </div>
+</main>
+<br><br><br><br><br>
+<app-footer></app-footer>
