@@ -81,7 +81,7 @@ function verifyToken(req,res,next){
 
 }
 
-router.get('/allusers',function(req,res,next){
+router.get('',function(req,res,next){
     User.find((err,data)=>{
         if(!err){
           res.json(data);

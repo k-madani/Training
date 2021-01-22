@@ -176,7 +176,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/User/production/1611200630083-2021-01-21T03:43:50.083Z/User.zip"
+                "S3Key": "serverless/User/production/1611293110202-2021-01-22T05:25:10.202Z/User.zip"
               },
               "Handler": "lambda.handler",
               "Runtime": "nodejs12.x",
@@ -194,14 +194,14 @@
               "ApiLogGroup"
             ]
           },
-          "ApiLambdaVersionhZuFVVpZL2CUfQOM9YhVq4d2zYWE5YJ8y3zc127ILeU": {
+          "ApiLambdaVersionWjiVdIB4jQaE9zIbWFxP9055ph4UeXYgpSV2yw7l0": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ApiLambdaFunction"
               },
-              "CodeSha256": "plcUnzA9pJCDerl5C4v7/3MS0IqaeItpGaVnZfmi7rg="
+              "CodeSha256": "vlXmi38LDOvZM9K7+opW7FtzD9AfP3OwDFR4ULeSKJU="
             }
           },
           "ApiGatewayRestApi": {
@@ -320,7 +320,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1611200606249": {
+          "ApiGatewayDeployment1611293084439": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -380,7 +380,7 @@
           "ApiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ApiLambdaVersionhZuFVVpZL2CUfQOM9YhVq4d2zYWE5YJ8y3zc127ILeU"
+              "Ref": "ApiLambdaVersionWjiVdIB4jQaE9zIbWFxP9055ph4UeXYgpSV2yw7l0"
             }
           },
           "ServiceEndpoint": {
@@ -510,7 +510,7 @@
         "timeout": 15,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "ApiLambdaVersionhZuFVVpZL2CUfQOM9YhVq4d2zYWE5YJ8y3zc127ILeU"
+        "versionLogicalId": "ApiLambdaVersionWjiVdIB4jQaE9zIbWFxP9055ph4UeXYgpSV2yw7l0"
       }
     },
     "configValidationMode": "warn",
@@ -531,7 +531,7 @@
     "artifact": "D:\\Documents\\Training\\Case Study - On demand car wash\\server\\microservices\\users\\.serverless\\User.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/User/production/1611200630083-2021-01-21T03:43:50.083Z",
+    "artifactDirectoryName": "serverless/User/production/1611293110202-2021-01-22T05:25:10.202Z",
     "artifact": "User.zip"
   }
 }
